@@ -47,7 +47,7 @@ int main(){
     printf( "Age :  \n" ) ;
     scanf( "%d", &age2 ) ;
 
-    printf( "** RESULT **\n" ) ;
+    printf( "\n** RESULT **\n" ) ;
     printf( "Name: %s (%d)\n", name1, age1 ) ;
     printf( "Name: %s (%d)\n", name2, age2 ) ;
 
