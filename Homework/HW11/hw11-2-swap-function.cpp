@@ -52,7 +52,7 @@ int main(){
     printf( "Name: %s (%d)\n", name2, age2 ) ;
 
     A( &age1, &age2 ) ;
-    printf( "** SWAP AGE **\n" ) ;
+    printf( "\n** SWAP AGE **\n" ) ;
     printf( "Name: %s (%d)\n", name1, age2 ) ;
     printf( "Name: %s (%d)\n", name2, age1 ) ;
 
