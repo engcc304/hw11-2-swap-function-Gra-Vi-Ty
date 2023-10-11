@@ -1,97 +1,36 @@
-/*
-    จงเขียนฟังก์ชันการตัดเกรดในแต่ละรายวิชาของนักเรียนจำนวน 3 คน โดยนักเรียนแต่ละคนจะมีข้อมูลดังต่อไปนี้
-    ชื่อ, นักศักศึกษา, คะแนนในวิชาที่ 1, คะแนนในวิชาที่ 2, คะแนนในวิชาที่ 3, คะแนนในวิชาที่ 4, คะแนนในวิชาที่ 5
-    แสดงได้ดังโครงสร้างข้อมูลต่อไปนี้
-
-    struct Student {
-        char Name[20] ;
-        char ID[5] ;
-        float ScoreSub1 ;
-        float ScoreSub2 ;
-        float ScoreSub3 ;
-        float ScoreSub4 ;
-        float ScoreSub5 ;
-    } typedef S ;
-
-    Test Case:
-        Enter the details of 3 students :
-        Student 1:
-        Name: 
-            John Doe
-        ID: 
-            101
-        Scores in Subject 1: 
-            77
-        Scores in Subject 2: 
-            64
-        Scores in Subject 3: 
-            66
-        Scores in Subject 4: 
-            54
-        Scores in Subject 5: 
-            56
-
-        Student 2:
-        Name: 
-            Jane Smith
-        ID: 
-            102
-        Scores in Subject 1: 
-            43
-        Scores in Subject 2: 
-            70
-        Scores in Subject 3: 
-            76
-        Scores in Subject 4: 
-            77
-        Scores in Subject 5: 
-            80
-
-        Student 3:
-        Name: 
-            Mark Johnson
-        ID: 
-            103
-        Scores in Subject 1: 
-            77
-        Scores in Subject 2: 
-            74
-        Scores in Subject 3: 
-            76
-        Scores in Subject 4: 
-            81
-        Scores in Subject 5: 
-            69
-
-    Output:
-    Student Details:
-    Student 1:
-    Name: John Doe
-    ID: 101
-    Scores: 77 64 66 54 56
-    Grades: B+  C C+ D  D+
-    Average Scores: 63.4
-
-    Student 2:
-    Name: Jane Smith
-    ID: 102
-    Scores: 43 70 76 77 80
-    Grades:  F  B B+ B+  A
-    Average Scores: 69.2
-
-    Student 3:
-    Name: Mark Johnson
-    ID: 103
-    Scores: 77 74 76 81 69
-    Grades: B+  B B+  A C+
-    Average Scores: 75.4
-*/
-
 #include <stdio.h>
 
+void A(int *i, int *j) {
+    int c = *i;
+    *i = *j;
+    *j = c;
+}
+
 int main() {
+    char name1[50], name2[50];
+    int age1, age2;
 
-    //--| YOUR CODE HERE
+    printf("Input A\n");
+    printf("Name : \n");
+    scanf("%s", name1);
+    printf("Age :  \n");
+    scanf("%d", &age1);
 
-    return 0 ;
-}//end main function
+    printf("Input B\n");
+    printf("Name : \n");
+    scanf("%s", name2);
+    printf("Age :  \n");
+    scanf("%d", &age2);
+
+    printf("** RESULT **\n");
+    printf("Name: %s (%d)\n", name1, age1);
+    printf("Name: %s (%d)\n", name2, age2);
+
+    A(&age1, &age2);
+
+    printf("** SWAP AGE **\n");
+    printf("Name: %s (%d)\n", name1, age1);
+    printf("Name: %s (%d)\n", name2, age2);
+
+    return 0;
+}
